@@ -9,6 +9,9 @@ Part 3: Building a LangChain Agent to automate that process (02_LangChain_agent.
 Part 4: Rebuilding the LangChain Agent with LangGraph (03_LangGraph_agent.ipynb)
 Part 5: Building a LangGraph agent from scratch that accesses a vector database and writes LangChain code (04_LangGraph_develompent_team.ipynb)
 
+
+You can [watch the video on YouTube](https://youtu.be/oMRJ--GJCKQ)
+
 # Project Setup
 You will need to create a .env file with your own keys. I have provided an example at .env.example
 
