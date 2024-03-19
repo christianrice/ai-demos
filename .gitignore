@@ -1,4 +1,5 @@
 .env
 
 /workbook
+__pycache__
 Purge_demos.ipynb
