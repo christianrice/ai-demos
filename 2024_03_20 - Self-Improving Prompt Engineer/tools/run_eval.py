@@ -12,7 +12,7 @@ def evaluate_against_expected_output(expected_output, actual_output):
         {"expected_output": expected_output, "actual_output": actual_output}
     )
     print(
-        "Expected Output Result: ",
+        "Expected Positive Output Result: ",
         evaluation_result.get("eval"),
         evaluation_result.get("failure_reason"),
     )
@@ -24,7 +24,7 @@ def evaluate_against_bad_output(expected_output, actual_output):
     evaluation_result = evaluate_bad_output_runnable.invoke(
         {"expected_output": expected_output, "actual_output": actual_output}
     )
-    print("Bad Output Result: ", evaluation_result.content)
+    print("Expected Negative Output Result: ", evaluation_result.content)
 
     if evaluation_result.content == "DIFFERENT":
         return True, evaluation_result.content
@@ -98,7 +98,9 @@ def process_eval_dataset(file_name, prompt_inputs):
     bad_responses = 0
     with open(file_name, "r") as infile:
         for line_number, line in enumerate(infile, start=1):
+            print("\n")
             print(f"Running line {line_number}")
+            print("---------------")
             # line = next(infile)
             data = json.loads(line.strip())
             messages = [HumanMessage(content=data.get("input"))]
@@ -140,6 +142,9 @@ def process_eval_dataset(file_name, prompt_inputs):
                 print("Encountered 3 bad responses. Ending process.")
                 break
 
+    print("\n")
+    print("Eval Results:")
+    print("Confusion Matrix:")
     print(confusion_matrix)
 
     total_cases = sum(confusion_matrix.values())
@@ -149,6 +154,7 @@ def process_eval_dataset(file_name, prompt_inputs):
         else 0
     )
 
+    print("\n")
     print("Accuracy: ", accuracy)
 
     return confusion_matrix, accuracy, inaccurate_responses

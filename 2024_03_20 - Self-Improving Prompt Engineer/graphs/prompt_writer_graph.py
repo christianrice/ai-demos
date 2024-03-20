@@ -159,9 +159,12 @@ def call_tester(state):
     input[what_changed] = change["new_value"]
 
     print("----------------")
-    print(f"Testing the new prompt with the change:")
-    print(f"What changed: {what_changed}")
-    print(f"New value: {change['new_value']}")
+    print("----------------")
+    print(f"Testing the prompt with the following revision:")
+    print(f"Section changed: {what_changed}")
+    print(f"New value:")
+    print(f"{change['new_value']}")
+    print("----------------")
 
     # Run the test
     confusion_matrix, accuracy, inaccurate_responses = process_eval_dataset(
@@ -196,8 +199,10 @@ def call_tester(state):
         temp_prompt_change_log[-1]["decision"] = "Accepted change"
         print("Accepted change, here is the new prompt:")
         print(temp_prompt)
+        print("\n")
     else:
         print("Rejected change")
+        print("\n")
 
     # Return the updated state with the modified prompt history
     return {
