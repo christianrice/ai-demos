@@ -1,0 +1,10 @@
+{"input": "I'm a vegetarian, so I don't eat any meat or fish.", "memories": [], "desired_response": [{"knowledge": "I am vegetarian", "category": "ATTRIBUTE", "action": "CREATE"}]}
+{"input": "I absolutely love spicy foods, the hotter the better!", "memories": [], "desired_response": [{"knowledge": "I love spicy foods", "category": "LIKE", "action": "CREATE"}]}
+{"input": "I prefer vegetarian meals.", "memories": ["I prefer vegetarian meals"], "desired_response": [{"knowledge": "I prefer vegetarian meals", "category": "ATTRIBUTE", "action": "CREATE"}]}
+{"input": "I prefer to avoid dairy in my meals.", "memories": ["Family loves spicy foods"], "desired_response": [{"knowledge": "I prefer to avoid dairy in my meals", "category": "DISLIKE", "action": "CREATE"}]}
+{"input": "I like spicy foods with a kick!", "memories": [], "desired_response": [{"knowledge": "I like spicy foods.", "category": "LIKE", "action": "CREATE"}]}
+{"input": "I prefer meals that can be prepped in under 30 minutes.", "memories": [], "desired_response": [{"knowledge": "I prefer meals that can be prepped in under 30 minutes", "category": "ATTRIBUTE", "action": "CREATE"}]}
+{"input": "I'm vegetarian, so no meat for me!", "memories": [], "desired_response": [{"knowledge": "I'm vegetarian", "category": "ATTRIBUTE", "action": "CREATE"}]}
+{"input": "I like spicy foods that pack a punch!", "memories": ["I avoid dairy, I love spicy foods"], "desired_response": [{"knowledge": "I like spicy foods", "category": "LIKE", "action": "CREATE"}]}
+{"input": "I am a vegetarian and prefer to have plant-based meals throughout the week.", "memories": ["I am not a vegetarian"], "desired_response": [{"knowledge": "I am a vegetarian", "category": "ATTRIBUTE", "action": "UPDATE"}]}
+{"input": "I don't eat dairy.", "memories": ["I prefer vegetarian meals"], "desired_response": [{"knowledge": "I don't eat dairy", "category": "DISLIKE", "action": "CREATE"}]}
