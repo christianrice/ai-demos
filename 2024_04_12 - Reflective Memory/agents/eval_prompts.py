@@ -9,7 +9,7 @@ from langchain_core.output_parsers import JsonOutputParser
 
 
 SYSTEM_PROMPT_EXPECTED_RESPONSE = """
-Your job is to compare an actual response vs an expected response and evalute if the response is correct.
+Your job is to compare an actual response vs an expected response and evaluate if the response is correct.
 
 The wording may be a little different, but the meaning should be the same and should not omit any important details. For example: "I like pasta" and "I enjoy pasta" are equivalent, "We eat 3 meals a week" and "Family eats 3 meals a week" are equivalent.
 
@@ -34,7 +34,7 @@ And here is the actual output:
 
 Remember: words do not need to be identical, but the meaning for each should be pretty similar.
 
-Now take a deep breath and compare the expected vs actual ouptut.
+Now take a deep breath and compare the expected vs actual output.
 
 If the actual output matches the expected output across all 3 dimensions for every entry, then this should be evaluated as a pass. Otherwise, it is a failure and you should provide an incredibly brief explanation of what went wrong. Only describe what went wrong, not went right.
 
