@@ -10,9 +10,7 @@ from langchain_core.pydantic_v1 import BaseModel, Field
 class GenerateCritique(BaseModel):
     """Critique the AI analysis"""
 
-    is_perfect: bool = Field(
-        ..., description="True if the analysis is perfect, False otherwise"
-    )
+    is_perfect: bool = Field(..., description="True if the analysis is perfect, False otherwise")
     criticism: str = Field(
         ...,
         description="What did the AI get wrong? If the analysis is perfect, explain why it is perfect",
@@ -73,7 +71,7 @@ My youngest daughter is lactose intolerant.
 
 Then you should call GenerateCritique with the following parameters:
 is_perfect: false
-crticism: Incorrectly stated that the daughter is allergic to dairy, it should have been more specific and said the youngest daughter is lactose intolerant.
+criticism: Incorrectly stated that the daughter is allergic to dairy, it should have been more specific and said the youngest daughter is lactose intolerant.
 ```
 
 ```
@@ -89,7 +87,7 @@ is_perfect: true
 criticism: NA
 ```
 
-Take a deep breath, think step by step, and then share your analysis of how the AI performed in relation to the following analysis and original message history. Use the GenereateCritique tool to provide your analysis.
+Take a deep breath, think step by step, and then share your analysis of how the AI performed in relation to the following analysis and original message history. Use the GenerateCritique tool to provide your analysis.
 
 Here is the AI analysis and original message history to analyze:
 """
